@@ -1,5 +1,6 @@
 'use client'
 
+import { motion } from "framer-motion"
 import { useState } from "react"
 
 export default function Home() {
@@ -21,16 +22,24 @@ export default function Home() {
       <section className="flex relative">
         <button 
           onClick={() => prevImage()}
-          className="flex justify-center items-center w-7 h-12 px-2 absolute m-auto top-0 bottom-0 left-4 bg-black rounded-xl bg-opacity-70 hover:bg-opacity-100 text-5xl -scale-x-100"
-        >{"‣"}
+          className="flex justify-center items-center w-7 h-12 px-2 absolute m-auto top-0 bottom-0 left-4 bg-black rounded-xl bg-opacity-70 hover:bg-opacity-100 text-4xl"
+        >
+          <motion.span whileTap={{x: -6}}>{"◂"}</motion.span>
         </button>
 
-        <img className="object-cover w-[600px] h-[300px]" src={`/${images[currentImage]}`} alt="cat image" title="cat"></img>
+        <motion.img
+          className="object-cover w-[600px] h-[300px]"
+          src={`/${images[currentImage]}`}
+          alt="cat image"
+          title="cat"
+        > 
+        </motion.img>
 
         <button
           onClick={() => nextImage()}
-          className="flex justify-center items-center w-7 h-12 px-2 absolute m-auto top-0 bottom-0 right-4 bg-black rounded-xl bg-opacity-70 hover:bg-opacity-100 text-5xl"
-        >{"‣"}
+          className="flex justify-center items-center w-7 h-12 px-2 absolute m-auto top-0 bottom-0 right-4 bg-black rounded-xl bg-opacity-70 hover:bg-opacity-100 text-4xl"
+        >
+          <motion.span whileTap={{x: 6}}>{"▸"}</motion.span>
         </button>
       </section>
     </main>
