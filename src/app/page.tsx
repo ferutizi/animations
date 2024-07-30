@@ -17,14 +17,14 @@ export default function Home() {
   }
 
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="flex relative">
-        <button onClick={() => prevImage()} className="text-5xl absolute m-auto top-0 bottom-0 left-2">{"\<"}</button>
+    <main className="flex min-h-screen flex-col items-center justify-center">
+      <section className="flex relative">
+        <button onClick={() => prevImage()} className="flex justify-center items-center w-7 h-12 px-2 absolute m-auto top-0 bottom-0 left-2 bg-black rounded-xl bg-opacity-70 hover:bg-opacity-100 text-2xl">{"\<"}</button>
         <div className="">
           <img className="object-cover w-[600px] h-[300px]" src={`/${images[currentImage]}`} alt="cat image" title="cat"></img>
         </div>
-        <button onClick={() => nextImage()} className="text-5xl absolute m-auto top-0 bottom-0 right-2">{"\>"}</button>
-      </div>
+        <button onClick={() => nextImage()} className="flex justify-center items-center w-7 h-12 px-2 absolute m-auto top-0 bottom-0 right-2 bg-black rounded-xl bg-opacity-70 hover:bg-opacity-100 text-2xl">{"\>"}</button>
+      </section>
     </main>
   );
 }
