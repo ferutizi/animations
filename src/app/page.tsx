@@ -59,11 +59,9 @@ export default function Home() {
           <motion.span whileTap={{x: 6}}>{"▸"}</motion.span>
         </button>
         <div className="flex items-center justify-center text-center gap-4 text-3xl">
-          <span className={`${currentImage !== 0 && "opacity-60"} cursor-pointer transition-all ease-in-out duration-300`} onClick={() => setCurrentImage(0)}>•</span>
-          <span className={`${currentImage !== 1 && "opacity-60"} cursor-pointer transition-all ease-in-out duration-300`} onClick={() => setCurrentImage(1)}>•</span>
-          <span className={`${currentImage !== 2 && "opacity-60"} cursor-pointer transition-all ease-in-out duration-300`} onClick={() => setCurrentImage(2)}>•</span>
-          <span className={`${currentImage !== 3 && "opacity-60"} cursor-pointer transition-all ease-in-out duration-300`} onClick={() => setCurrentImage(3)}>•</span>
-          <span className={`${currentImage !== 4 && "opacity-60"} cursor-pointer transition-all ease-in-out duration-300`} onClick={() => setCurrentImage(4)}>•</span>
+          {images.map((e, index) => 
+            <span key={e} className={`${currentImage !== index && "opacity-60"} cursor-pointer transition-all ease-in-out duration-300`} onClick={() => setCurrentImage(index)}>•</span>
+          )}
         </div>
       </section>
     </main>
