@@ -5,7 +5,7 @@ import { useState } from "react"
 
 export default function Home() {
   const [currentImage, setCurrentImage] = useState(0)
-  const images = ["cat1.jpg", "cat2.jpg", "cat3.jpg"]
+  const images = ["cat1.jpg", "cat2.jpg", "cat3.jpg", "cat4.jpg", "cat5.jpg"]
 
   const prevImage = () => {
     const prev = currentImage > 0 ? currentImage -1 : images.length -1;
@@ -62,6 +62,8 @@ export default function Home() {
           <span className={`${currentImage !== 0 && "opacity-60"} cursor-pointer`} onClick={() => setCurrentImage(0)}>•</span>
           <span className={`${currentImage !== 1 && "opacity-60"} cursor-pointer`} onClick={() => setCurrentImage(1)}>•</span>
           <span className={`${currentImage !== 2 && "opacity-60"} cursor-pointer`} onClick={() => setCurrentImage(2)}>•</span>
+          <span className={`${currentImage !== 3 && "opacity-60"} cursor-pointer`} onClick={() => setCurrentImage(3)}>•</span>
+          <span className={`${currentImage !== 4 && "opacity-60"} cursor-pointer`} onClick={() => setCurrentImage(4)}>•</span>
         </div>
       </section>
     </main>
