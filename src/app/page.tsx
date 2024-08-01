@@ -33,10 +33,10 @@ export default function Home() {
   }
 
   return (
-    <main className="flex min-h-screen flex-col items-center justify-center">
+    <main className="flex min-h-screen flex-col items-center justify-center bg-zinc-900">
       <section className="flex-col relative">
         <motion.img
-          className="object-cover w-[600px] h-[300px] rounded-xl"
+          className="object-cover w-[80rem] aspect-video rounded-lg"
           key={images[currentImage]}
           variants={variants}
           animate="animate"
@@ -48,13 +48,13 @@ export default function Home() {
         /> 
         <button 
           onClick={() => prevImage()}
-          className="flex justify-center items-center w-7 h-12 px-2 absolute m-auto top-0 bottom-0 left-4 bg-black rounded-xl bg-opacity-70 hover:bg-opacity-100 text-4xl"
+          className="flex justify-center items-center w-8 h-14 px-2 absolute m-auto top-0 bottom-0 left-4 bg-black rounded-xl bg-opacity-70 hover:bg-opacity-100 text-4xl"
         >
           <motion.span whileTap={{x: -6}}>{"◂"}</motion.span>
         </button>
         <button
           onClick={() => nextImage()}
-          className="flex justify-center items-center w-7 h-12 px-2 absolute m-auto top-0 bottom-0 right-4 bg-black rounded-xl bg-opacity-70 hover:bg-opacity-100 text-4xl"
+          className="flex justify-center items-center w-8 h-14 px-2 absolute m-auto top-0 bottom-0 right-4 bg-black rounded-xl bg-opacity-70 hover:bg-opacity-100 text-4xl"
         >
           <motion.span whileTap={{x: 6}}>{"▸"}</motion.span>
         </button>
