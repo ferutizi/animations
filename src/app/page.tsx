@@ -24,7 +24,7 @@ export default function Home() {
     },
     animate: {
       x: 0,
-      opacity: 1
+      opacity: 1,
     },
     exit: {
       x: -200,
